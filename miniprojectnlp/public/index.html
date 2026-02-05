@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAG - PDF Q/A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>RAG PDF</h1>
+
+    <section>
+      <h2>1. Indexer un PDF</h2>
+      <form id="indexForm">
+        <input type="file" name="pdf" accept="application/pdf" required>
+        <button type="submit">Indexer</button>
+      </form>
+      <pre id="indexStatus"></pre>
+    </section>
+
+    <section>
+      <h2>2. Poser une question</h2>
+      <form id="askForm">
+        <input type="text" id="question" placeholder="Votre question..." required>
+        <button type="submit">Demander</button>
+      </form>
+      
+      <div id="answer"></div>
+      <pre id="sources"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
