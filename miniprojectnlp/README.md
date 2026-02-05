@@ -2,23 +2,23 @@
 
 Application web de Question/Réponse sur documents PDF utilisant le système RAG (Retrieval Augmented Generation) avec Ollama et JavaScript.
 
-## 🎯 Description
+##  Description
 
 Ce projet implémente un chatbot intelligent capable de répondre à des questions sur le contenu d'un document PDF. Il utilise la technique RAG qui combine :
 - **Retrieval** : Recherche sémantique dans le document via des embeddings vectoriels
 - **Augmented** : Enrichissement du contexte avec les passages pertinents
 - **Generation** : Génération de réponses par un modèle de langage (LLM)
 
-## ✨ Fonctionnalités
+##  Fonctionnalités
 
-- 📤 **Upload de PDF** : Importez vos documents PDF
-- 🔍 **Indexation automatique** : Le texte est extrait, découpé en chunks et vectorisé
-- 💬 **Questions/Réponses** : Posez des questions en langage naturel
-- 🎯 **Recherche sémantique** : Trouve les passages pertinents via similarité cosinus
-- 🤖 **Génération intelligente** : Réponses contextualisées par Llama 3.2
-- 🎨 **Interface minimaliste** : Design épuré et responsive
+-  **Upload de PDF** : Importez vos documents PDF
+-  **Indexation automatique** : Le texte est extrait, découpé en chunks et vectorisé
+-  **Questions/Réponses** : Posez des questions en langage naturel
+-  **Recherche sémantique** : Trouve les passages pertinents via similarité cosinus
+-  **Génération intelligente** : Réponses contextualisées par Llama 3.2
+-  **Interface minimaliste** : Design épuré et responsive
 
-## 🛠️ Technologies
+##  Technologies
 
 ### Backend
 - **Node.js** v24+ (support natif de `fetch`)
@@ -35,7 +35,7 @@ Ce projet implémente un chatbot intelligent capable de répondre à des questio
 - HTML5, CSS3, JavaScript vanilla
 - Fetch API pour les requêtes AJAX
 
-## 📋 Prérequis
+##  Prérequis
 
 1. **Node.js** : Version 24.13.0 ou supérieure
    ```bash
@@ -52,7 +52,7 @@ Ce projet implémente un chatbot intelligent capable de répondre à des questio
    ollama list
    ```
 
-## 🚀 Installation
+##  Installation
 
 1. **Cloner ou télécharger le projet**
    ```bash
@@ -79,7 +79,7 @@ Ce projet implémente un chatbot intelligent capable de répondre à des questio
    http://localhost:3000
    ```
 
-## 📖 Utilisation
+##  Utilisation
 
 ### 1. Indexer un PDF
 
@@ -100,7 +100,7 @@ Ce projet implémente un chatbot intelligent capable de répondre à des questio
 
 **Réponse** : Le système analyse le PDF, trouve les passages pertinents et génère une réponse contextualisée.
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 miniprojectnlp/
@@ -117,7 +117,7 @@ miniprojectnlp/
     └── app.js         # Logique frontend (fetch API)
 ```
 
-## 🔧 Architecture RAG
+##  Architecture RAG
 
 ### Pipeline d'indexation
 
@@ -141,7 +141,7 @@ Question → Embedding → Recherche similarité → Top-K chunks → LLM → R�
 3. **Top-K** : Sélection des 5 chunks les plus pertinents
 4. **Génération** : `llama3.2` génère la réponse à partir du contexte
 
-## 🧮 Calcul de similarité
+##  Calcul de similarité
 
 La similarité cosinus mesure l'angle entre deux vecteurs :
 
@@ -153,7 +153,7 @@ cosθ = (A · B) / (||A|| × ||B||)
 - **0.0** : Vecteurs orthogonaux (non pertinent)
 - **-1.0** : Vecteurs opposés
 
-## 📊 API Routes
+##  API Routes
 
 ### `GET /api/health`
 Vérification de l'état du serveur
@@ -208,7 +208,7 @@ Question sur le PDF indexé
 }
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Paramètres RAG (dans `rag.js`)
 
@@ -234,7 +234,7 @@ Pour changer :
 PORT=8080 npm start
 ```
 
-## 🐛 Dépannage
+##  Dépannage
 
 ### Ollama n'est pas accessible
 ```bash
@@ -258,7 +258,7 @@ ollama serve
 - Ajustez `chunkSize` et `chunkOverlap`
 - Essayez un modèle LLM plus performant
 
-## 📚 Concepts NLP
+##  Concepts NLP
 
 ### Embeddings
 Représentation vectorielle du texte qui capture le sens sémantique. Des textes similaires auront des vecteurs proches.
@@ -273,23 +273,21 @@ Découpage du texte en morceaux gérables par le LLM. L'overlap évite de perdre
 ### Vector Store
 Base de données contenant les chunks avec leurs embeddings pour une recherche rapide.
 
-## 🎓 Ressources
+##  Ressources
 
 - [Ollama Documentation](https://ollama.ai/docs)
 - [RAG Explained](https://arxiv.org/abs/2005.11401)
 - [Langchain RAG Tutorial](https://python.langchain.com/docs/use_cases/question_answering/)
 - [Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
 
-## 👤 Auteur
+##  Auteur
 
 **Imen Boussetta**
 
 Projet développé dans le cadre d'une formation en Intelligence Artificielle (LLM, LangChain, RAG, Agents).
 
-## 📝 Licence
+##  Licence
 
 Ce projet est à usage éducatif.
 
----
 
-Fait avec ❤️ en JavaScript et Ollama
